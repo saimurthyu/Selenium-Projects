@@ -1,0 +1,1 @@
+{"uuid":"589e1ea8-fee5-445d-8e06-33f7c8a680ec","name":"Com.Magento.MagentoBase.logout","children":["904d047b-e7ec-4e41-a9fc-904440aa327e"],"description":"","befores":[],"afters":[{"name":"logout","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1689697862711,"stop":1689697862711}],"start":1689697862711,"stop":1689697862711}

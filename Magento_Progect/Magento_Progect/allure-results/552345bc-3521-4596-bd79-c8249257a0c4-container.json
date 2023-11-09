@@ -1,0 +1,1 @@
+{"uuid":"552345bc-3521-4596-bd79-c8249257a0c4","name":"Com.Magento.MagentoBase.login","children":["8192700b-4ce2-45fc-b74a-09e9f239606b"],"description":"","befores":[{"name":"login","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1689568635406,"stop":1689568635407}],"afters":[],"start":1689568635406,"stop":1689568635407}
