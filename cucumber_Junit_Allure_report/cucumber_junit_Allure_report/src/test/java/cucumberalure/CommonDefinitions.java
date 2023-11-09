@@ -31,7 +31,7 @@ public class CommonDefinitions {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
- @TmsLink(value = "vamshi")
+ @TmsLink(value = "sai")
     @After
     public void tearDown(Scenario scenario) throws IOException {
        
@@ -39,7 +39,7 @@ public class CommonDefinitions {
                 TakesScreenshot ts = (TakesScreenshot) driver;
                 byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
                 File src=ts.getScreenshotAs(OutputType.FILE);
-                File dsc=new File("C:\\Users\\VamshidharReddyDevir\\eclipse-workspace\\Testngprograms\\cucumberalure\\Screenshot"+scenario.getName()+".png");
+                File dsc=new File("C:\\Users\\saimurthy\\eclipse-workspace\\Testngprograms\\cucumberalure\\Screenshot"+scenario.getName()+".png");
 Files.copy(src, dsc);
 Allure.addAttachment(scenario.getName(),new ByteArrayInputStream(((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES)));
 Allure.link("https://stackoverflow.com/questions/50941193/how-to-add-link-on-test-case-failure-in-allure-report");
