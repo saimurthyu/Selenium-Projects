@@ -23,7 +23,7 @@ public class GoogleClass {
 
 	@And("User enters password as \"admin123\"{int}")
 	public void user_enters_password_as_admin123(Integer int1) {
-	   driver.findElement(By.name("vamshi"));
+	   driver.findElement(By.name("sai"));
 	}
 
 	@Then("User should be able to login sucessfully34")
