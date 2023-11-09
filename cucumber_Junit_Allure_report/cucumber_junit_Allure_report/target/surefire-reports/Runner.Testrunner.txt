@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: Runner.Testrunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 42.295 s <<< FAILURE! - in Runner.Testrunner
+i want to test the google.Scenario - Login with valid credentials  Time elapsed: 40.488 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: *[name='vamshi']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-2A8DDC6', ip: '192.168.29.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 112.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20230424110519, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 2920, moz:profile: C:\Users\VAMSHI~1\AppData\L..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 00350856-cce3-4382-bd4e-bbfaa6b50991
+*** Element info: {Using=name, value=vamshi}
+
