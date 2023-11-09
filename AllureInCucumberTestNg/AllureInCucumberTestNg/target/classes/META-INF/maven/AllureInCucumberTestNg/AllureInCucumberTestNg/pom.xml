@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>AllureInCucumberTestNg</groupId>
+  <artifactId>AllureInCucumberTestNg</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <name>AllureInCucumberTestNg</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <selenium.version>3.141.59</selenium.version>
+    <cucumber.version>5.7.0</cucumber.version>
+    <testng.version>7.4.0</testng.version>
+    <allure.cucumber5.version>2.14.0</allure.cucumber5.version>
+    <maven.compiler.plugin.version>3.5.1</maven.compiler.plugin.version>
+    <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <aspectj.version>1.9.6</aspectj.version>
+    <allure.maven.version>2.10.0</allure.maven.version>
+  </properties>
+
+  <dependencies>
+  <!-- https://mvnrepository.com/artifact/log4j/log4j -->  
+<dependency>  
+    <groupId>log4j</groupId>  
+    <artifactId>log4j</artifactId>  
+    <version>1.2.17</version>  
+</dependency>  
+  <!--Cucumber Dependencies-->  
+    <dependency>
+       <groupId>io.cucumber</groupId>
+       <artifactId>cucumber-java</artifactId>
+       <version>${cucumber.version}</version>
+    </dependency>
+  
+  <!--Selenium Dependency-->
+    <dependency>
+       <groupId>org.seleniumhq.selenium</groupId>
+       <artifactId>selenium-java</artifactId>
+       <version>${selenium.version}</version>
+    </dependency>
+ 
+  <!--Cucumber TestNG Dependency-->
+    <dependency>
+       <groupId>io.cucumber</groupId>
+       <artifactId>cucumber-testng</artifactId>
+       <version>${cucumber.version}</version>
+        <scope>test</scope>
+    </dependency>
+  <!--Hamcrest Dependency-->
+    <dependency>
+       <groupId>org.hamcrest</groupId>
+       <artifactId>hamcrest</artifactId>
+       <version>2.2</version>
+       <scope>test</scope>
+    </dependency>
+     
+  <!--Allure Cucumber Dependency-->   
+      <dependency>
+         <groupId>io.qameta.allure</groupId>
+         <artifactId>allure-cucumber5-jvm</artifactId>
+         <version>${allure.cucumber5.version}</version>
+    </dependency> 
+    <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>4.4.3</version>
+</dependency>
+
+ 
+</dependencies>
+
+  <build>
+    <plugins>   
+      <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source> 
+                    <target>${maven.compiler.target}</target> 
+                </configuration>
+            </plugin>
+      
+     <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+             <version>${maven.surefire.plugin.version}</version>
+            <configuration>
+            <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                <argLine>
+                    -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    -Dcucumber.options="--plugin io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm"
+                </argLine>
+                         
+            </configuration>
+            <dependencies>
+                <dependency>
+                    <groupId>org.aspectj</groupId>
+                    <artifactId>aspectjweaver</artifactId>
+                    <version>${aspectj.version}</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+         
+         <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>${allure.maven.version}</version>
+                <configuration>
+                    <reportVersion>${allure.version}</reportVersion>
+                </configuration>
+            </plugin>
+      </plugins>      
+   </build>
+</project>
