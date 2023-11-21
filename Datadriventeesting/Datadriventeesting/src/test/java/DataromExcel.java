@@ -32,7 +32,7 @@ public class DataromExcel {
 		}
 		return s;
 	}
-	@DataProvider(name= "vamshi")
+	@DataProvider(name= "Moon")
 	public static String[][] geting() throws EncryptedDocumentException, IOException{
 		/* return new String [][] {{"vamshi","shiva","devi"},{"123","3455","678"}}; */
 		String s[][]=data();
@@ -40,7 +40,7 @@ public class DataromExcel {
 	
 		
 	}
-	@Test(dataProvider = "vamshi")
+	@Test(dataProvider = "Moon")
 	public void test(String s,String s2) {
 		System.out.println(s);
 	
